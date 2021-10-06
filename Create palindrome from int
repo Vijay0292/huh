@@ -1,0 +1,14 @@
+//Create a palindrome from Tutorial Point.com//
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    cout<<n;
+    while (n)
+    {
+        cout<<n%10;
+        n=n/10;
+    }
+}
