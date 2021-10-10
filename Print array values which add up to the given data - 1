@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n];
+    int givendata;
+for (int i =0; i<=n-1;i++)
+{
+    cin>>a[i];
+}
+cin>>givendata;
+for (int i=0; i<=n-1;i++)
+{
+  // start this index at one higher than i. Since a+b == b+a, there's no need to
+  // add the later values in the array with the previous ones, we've already
+  // done that
+  for (int j=i+1; j<=n; j++)
+  {
+    int sum = a[i]+a[j];
+    if (sum == givendata)
+    {
+      std::cout<<i<<" "<<j<<" ";
+    }
+  }
+}
+return 0;
+}
